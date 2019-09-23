@@ -1,0 +1,25 @@
+
+<!--  <div class="main" style="  " *ngFor="let data of datas">
+  <img src="http://localhost:1234/data/view/{{data.photo}}" alt="Snow" style="width:30%">
+  <div class="text" style="">
+  <b>{{data.message}}</b></div>
+</div>  -->
+
+<div class="card s12 m4 l8 "  style="margin-left:30px;margin-right:30px;">
+  <div class="row" >
+    <div class="col s3" *ngFor="let data of datas.slice().reverse()">
+      <div class="card">
+        <div class="card-image main" >
+          <img src="http://localhost:1234/data/view/{{data.photo}}">
+          <div class="text" style="">
+			<b>{{data.message}}</b>
+			</div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+    </div>
+
+	
+	

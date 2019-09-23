@@ -1,0 +1,25 @@
+<div class="card s12 m4 l8 "  style="margin-left:30px;margin-right:30px;">
+
+
+<div class="row" style="margin-left:20%;margin-right:20%;">
+    <div class="col s12"   *ngFor="let data of datas">
+      <div class="card">
+        <div class="card-image main" >
+          <img src="http://localhost:1234/data/view/{{data.photo}}">
+          <div class="text" style="">
+			<b>{{data.message}}</b>
+			</div>
+        </div>
+    
+      </div>
+    </div>
+	<div class="col s12 " style="margin-left:50%;margin-right:50%;">
+
+<button class="btn" (click)="deletepost()"> Delete Post</button>
+
+</div>
+  </div>
+  <br>
+  <br>
+
+</div>

@@ -1,0 +1,47 @@
+
+<router-outlet></router-outlet>
+
+
+
+<div class="card s12 m4 l8 "  style="margin-left:30px;margin-right:30px;">
+  <div class="col s12" *ngIf="sendstatus" style="margin-left:25%;margin-right:25%;" >
+      <div class="card" >
+        <div class="card-image main" >
+          <img src="http://localhost:1234/data/view/{{filename}}">
+          <div class="text" style="">
+			<b>{{msg}}</b>
+			</div>
+        </div>
+    
+      </div>
+    </div>
+
+ 
+     <div class="" >
+         <div class="card-body s12" style="margin-left:25%;margin-right:25%;" >
+         <h5 class="card-title">Create New Post</h5>
+
+         <a class="card-text"><b>Photo</b></a><br>
+         <input type="file" class="form-control btn"  name="bimage" [(ngModel)]="file" ng2FileSelect [uploader]="uploader" ><br>
+         
+         <a class="card-text"><b>Message:</b></a>
+         <textarea class="form-control input-field" placeholder="Input Your Message" name="description"  id="" cols="100" rows="5" [(ngModel)]="data.message" maxlength="75"></textarea><br>
+
+             <button class="btn btn-primary" type="submit"(click)="newpost()">Preview</button>
+			 <button *ngIf="sendstatus" class="btn btn-primary" type="submit"(click)="uploader.uploadAll();sendpost()">Send</button>
+      
+         </div>
+   
+     </div>
+ 
+    </div>
+	 
+
+ <br><br>
+
+ 
+ 
+ 
+  
+
+          
